@@ -23,26 +23,26 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::get('logout', 'LoginController@logout')->name('logout');
 
     // Registration Routes...
-    if (config('auth.users.registration')) {
-        Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
-        Route::post('register', 'RegisterController@register');
-    }
+    //if (config('auth.users.registration')) {
+    //    Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
+    //    Route::post('register', 'RegisterController@register');
+    //}
 
     // Password Reset Routes...
-    Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
-    Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-    Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('password/reset', 'ResetPasswordController@reset');
+    //Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    //Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    //Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
+    //Route::post('password/reset', 'ResetPasswordController@reset');
 
     // Confirmation Routes...
-    if (config('auth.users.confirm_email')) {
-        Route::get('confirm/{user_by_code}', 'ConfirmController@confirm')->name('confirm');
-        Route::get('confirm/resend/{user_by_email}', 'ConfirmController@sendEmail')->name('confirm.send');
-    }
+    //if (config('auth.users.confirm_email')) {
+    //    Route::get('confirm/{user_by_code}', 'ConfirmController@confirm')->name('confirm');
+    //   Route::get('confirm/resend/{user_by_email}', 'ConfirmController@sendEmail')->name('confirm.send');
+    //}
 
     // Social Authentication Routes...
-    Route::get('social/redirect/{provider}', 'SocialLoginController@redirect')->name('social.redirect');
-    Route::get('social/login/{provider}', 'SocialLoginController@login')->name('social.login');
+    //Route::get('social/redirect/{provider}', 'SocialLoginController@redirect')->name('social.redirect');
+    //Route::get('social/login/{provider}', 'SocialLoginController@login')->name('social.login');
 });
 
 /**
@@ -63,6 +63,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('permissions/{user}/repeat', 'PermissionController@repeat')->name('permissions.repeat');
     Route::get('dashboard/log-chart', 'DashboardController@getLogChartData')->name('dashboard.log.chart');
     Route::get('dashboard/registration-chart', 'DashboardController@getRegistrationChartData')->name('dashboard.registration.chart');
+
+    //Notes
+    Route::get('notes', 'NoteController@index')->name('notes');
+
 });
 
 

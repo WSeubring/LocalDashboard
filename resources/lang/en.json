@@ -155,6 +155,17 @@
   "views.admin.users.edit.roles": "Roles",
   "views.admin.users.edit.cancel": "Cancel",
   "views.admin.users.edit.save": "Save",
+
+  "**************************** Notes **********************": "Notes i18n",
+  "views.admin.notes.index.table_title": "Title",
+  "views.admin.notes.index.table_body": "Body",
+  "views.admin.notes.index.table_archived": "Archived",
+  "views.admin.notes.index.table_created_at": "Created at",
+  "views.admin.notes.index.table_updated_at": "Updated at",
+  "views.admin.notes.index.archived": "Archived",
+  "views.admin.notes.index.active": "Active",
+
+
   "**************************** Membership Plans **********************": "Membership Plans i18n",
   "views.membership.title": "Membership",
   "views.membership.table_header_0": "E-Mail",
